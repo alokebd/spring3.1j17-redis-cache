@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "764e493a-eb15-47d3-93d0-70206c24f969",
+		"name": "Spring3-JPA-CRUD-Redis-Cache",
+		"description": "Check all APIs in Swagger:\n\n[http://localhost:8080/swagger-ui.html#/](http://localhost:8080/swagger-ui.html#/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33936986"
+	},
+	"item": [
+		{
+			"name": "Create Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerName\": \"Alex\",\r\n  \"age\": 56\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/customers"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Customers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"orderInfo\": {\r\n  \"productName\": \"Mobile\",\r\n  \"orderStatus\": \"Created\"\r\n },\r\n \"paymentInfo\": {\r\n    \"productName\": \"Mobile\",\r\n    \"amount\": 20001.50\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/customers"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Cal-Mag-D\",\r\n  \"description\": \"Most valueable D and Magnacime resources\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/products"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"orderInfo\": {\r\n  \"productName\": \"Mobile\",\r\n  \"orderStatus\": \"Created\"\r\n },\r\n \"paymentInfo\": {\r\n    \"productName\": \"Mobile\",\r\n    \"amount\": 20001.50\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/products"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"orderInfo\": {\r\n  \"productName\": \"Mobile\",\r\n  \"orderStatus\": \"Created\"\r\n },\r\n \"paymentInfo\": {\r\n    \"productName\": \"Mobile\",\r\n    \"amount\": 20001.50\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/products/3"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"orderInfo\": {\r\n  \"productName\": \"Mobile\",\r\n  \"orderStatus\": \"Created\"\r\n },\r\n \"paymentInfo\": {\r\n    \"productName\": \"Mobile\",\r\n    \"amount\": 20001.50\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/products/4"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Fabric Softner\",\r\n    \"description\": \"Adding values for appropriate washing valuable cloths\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/products/3"
+			},
+			"response": []
+		}
+	]
+}
