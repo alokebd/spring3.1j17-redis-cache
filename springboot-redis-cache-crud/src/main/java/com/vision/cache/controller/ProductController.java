@@ -72,6 +72,7 @@ public class ProductController {
 
 
     @DeleteMapping("/products/{id}")
+    @CacheEvict(value = "product", key = "#id")
     public String delete(@PathVariable long id) {
         try {
             service.delete(id);

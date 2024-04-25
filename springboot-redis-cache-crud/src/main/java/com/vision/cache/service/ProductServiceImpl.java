@@ -24,7 +24,7 @@ public class ProductServiceImpl implements ProductService {
             repository.save(saveProduct(request));
             return "product created successfully";
         } else {
-            return "bad request,please check product details";
+            return "bad request, please check product details";
         }
     }
 

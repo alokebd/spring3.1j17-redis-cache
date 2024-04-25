@@ -1,17 +1,15 @@
 package com.vision.cache.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import com.vision.cache.payload.CustomerRequest;
 import com.vision.cache.payload.CustomerResponse;
 import com.vision.cache.service.CustomerService;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
@@ -41,6 +39,7 @@ public class CustomerController {
     }
 
     @GetMapping("/customers")
+    @Cacheable(cacheNames = "cache0", key = "'customer'")
     public ResponseEntity<List<CustomerResponse>> getAll() {
         try {
             return customerService.getAll();
